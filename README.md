@@ -17,4 +17,4 @@ npm start
 
 ## credit
 > all credit belongs to @nazihahmed @max1011 (same person)
-> this code is not allowed to be reused without the permission of the author
+> this repo is not allowed to be reused without the permission of the author
