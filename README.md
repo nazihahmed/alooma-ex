@@ -12,4 +12,4 @@ npm start
 ```
 
 ## credit
-> all credit belongs to nazih ahmed @nazihahmed @maxpcs
+> all credit belongs to @nazihahmed @max1011 (same person)
