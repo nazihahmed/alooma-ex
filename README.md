@@ -15,6 +15,10 @@ node src/server.js
 npm start
 ```
 
+## status
+- this code is potentially not working as i updated the code without being able to test,
+since a special vpn connection must be set in order for this to work
+
 ## credit
 > all credit belongs to @nazihahmed @max1011 (same person)
 > this repo is not allowed to be reused without the permission of the author

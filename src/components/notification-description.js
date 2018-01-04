@@ -8,8 +8,7 @@ class NotificationDescription extends Component {
       samples:[]
     };
   }
-  componentWillReceiveProps (nextProps) {
-    // this is called once
+  componentWillReceiveProps(nextProps) {
     if(this.props.eType && nextProps.eType !== this.props.eType) {
       console.log(this.props.eType);
       axios.get('http://localhost:8000/samples?eventType='+this.props.eType)
@@ -25,11 +24,9 @@ class NotificationDescription extends Component {
     }
   }
   renderSamples() {
-    let sample = [];
-    this.state.samples.map((sample)=> {
-      sample.push(<pre>{JSON.stringify(sample, null, 2) }</pre>)
+    return this.state.samples.map((sample)=> {
+      return(<pre>{JSON.stringify(sample, null, 2) }</pre>);
     });
-    return sample;
   }
   render() {
     return (
