@@ -149,7 +149,7 @@ class App extends Component {
             </ul>
           </div>
           <div className="col-sm-6">
-            <NotificationDescription message={this.state.message} eType={this.state.eType} sample={this.state.samples[0]}/>
+            <NotificationDescription message={this.state.message} eType={this.state.eType}/>
           </div>
         </div>
       </div>
