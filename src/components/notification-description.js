@@ -8,11 +8,10 @@ class NotificationDescription extends Component {
       samples:[]
     };
   }
-  componentDidMount() {
-    console.log('description mounted');
-    // fire off event listeners and requests
+  componentWillReceiveProps (nextProps) {
     let that = this;
-    if(this.props.eType) {
+    // this is called once
+    if(this.props.eType && nextProps.eType !== this.props.eType) {
       console.log(this.props.eType);
       axios.get('http://localhost:8000/samples?eventType='+this.props.eType)
       .then(function (response) {
