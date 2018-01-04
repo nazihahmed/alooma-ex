@@ -73,11 +73,9 @@ class App extends Component {
   }
   componentDidMount() {
     this.setState({isUpdated:true});
-    let that = this;
     axios.get('http://localhost:8000/notifications')
-    .then(function (response) {
-      console.log(response.data.messages);
-      that.setState({
+    .then((response) => {
+      this.setState({
         messages:response.data.messages
       })
     })
@@ -109,7 +107,7 @@ class App extends Component {
     severitiesDropdown.push(<MenuItem key={++b} onClick={this.filterSeverities}>All</MenuItem>);
     notificationTypesDropdown.push(<MenuItem key={++b} onClick={this.filterNotificationTypes}>All</MenuItem>);
     eventTypesDropdown.push(<MenuItem key={++b} onClick={this.filterEventTypes}>All</MenuItem>);
-    
+
     if(this.state.isUpdated) {
       this.filters.severities.forEach((severity,i)=>{
         b++;

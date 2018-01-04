@@ -15,7 +15,7 @@ class NotificationDescription extends Component {
       axios.get('http://localhost:8000/samples?eventType='+this.props.eType)
       .then((response) => {
         console.log('sample')
-        that.setState({
+        this.setState({
           samples:response.data
         })
       })
