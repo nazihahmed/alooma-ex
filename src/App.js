@@ -18,12 +18,13 @@ class App extends Component {
         eventTypesFilter:"",
         eType:""
     };
-  }
 
-  filters: {
-    severities:[],
-    eventTypes:[],
-    notificationTypes:[]
+    // current filters not part of the state
+    this.filters = {
+      severities:[],
+      eventTypes:[],
+      notificationTypes:[]
+    };
   }
 
   onActivate(message,id,eType) {
@@ -39,7 +40,7 @@ class App extends Component {
     let notifications = [];
     let {severities,eventTypes,notificationTypes} = this.filters;
     let {severityFilter,notificationTypesFilter,eventTypesFilter,uniqueMessages} = this.state;
-    this.state.messages.forEac(({severity,state,type,typeDescription,timestamp,id,aggregatedCount,message})=>{
+    this.state.messages.forEach(({severity,state,type,typeDescription,timestamp,id,aggregatedCount,message})=>{
       let eventType = message.match(/(?:type ")([\w\d]*)/gi);
       let eventTypeCheck = /(?:type ")([\w\d]*)/gi.test(message);
       if(eventTypeCheck) {

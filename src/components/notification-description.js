@@ -42,4 +42,8 @@ class NotificationDescription extends Component {
   }
 }
 
+NotificationDescription.propTypes = {
+  // name: PropTypes.string
+};
+
 export default NotificationDescription;
