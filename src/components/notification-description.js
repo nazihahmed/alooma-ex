@@ -9,18 +9,17 @@ class NotificationDescription extends Component {
     };
   }
   componentWillReceiveProps (nextProps) {
-    let that = this;
     // this is called once
     if(this.props.eType && nextProps.eType !== this.props.eType) {
       console.log(this.props.eType);
       axios.get('http://localhost:8000/samples?eventType='+this.props.eType)
-      .then(function (response) {
+      .then((response) => {
         console.log('sample')
         that.setState({
           samples:response.data
         })
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
       });
     }
